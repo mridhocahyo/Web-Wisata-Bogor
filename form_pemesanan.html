@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <title>Wisata Bogor</title>
+
+     <style>
+          body{
+               background-color: #D9DBF1;
+          }
+          
+          /* .col {
+               height: 400px;
+               display: block;
+          } */
+
+          .h1 {
+               font-size: 30px ;
+               font-weight: 600;
+               color: white;
+               text-shadow: 2px 2.5px #80475E;
+          }
+          .col img{
+               position: relative;
+               display: block;
+               height: 100%;
+               width: 100%;
+               -webkit-filter: grayscale(60%);
+               filter: grayscale(60%);
+               z-index: 0;
+          }
+          
+          figure{
+               position: absolute;
+               margin-left: 25px;
+               margin-top: -100px;
+               z-index: 1;
+          }
+          header {
+               position:relative;
+               width: 100%;
+               display: block;
+               height: 224px;
+               background-color: #D9DBF1;
+          }
+          section {
+               position:relative;
+               width: 100%;
+               display: block;
+               height: 400px;
+               background-color: #D9DBF1;
+          }
+          .nav-link {
+               margin-left: 8px;
+          }
+
+          footer {
+               position:relative;
+               width: 100%;
+               display: block;
+               height: 200px;
+               background-color: #2D728F;
+          }
+
+          .harga {
+               position: relative;
+               margin-top: 30px;
+               margin-left: 140px;
+
+          }
+          .secform {
+
+               height: auto;
+               width: 100%;
+               display: block;
+          }
+          form {
+               position: relative;
+               width: 55%;
+               height: auto;
+               margin-left: auto;
+               margin-right: auto;
+               margin-top:50px;
+               margin-bottom: 80px;
+               background-color: white;
+               padding: 30px;
+          }
+          form h3 {
+               padding-bottom:20px ;
+               margin-bottom: 25px;
+               border-bottom: 2px solid black;
+          }
+          
+     </style>
+</head>
+<body>
+     <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #4ABDAC;">
+     <!-- Container wrapper -->
+     <div class="container">
+       <!-- Navbar brand -->
+       <a class="navbar-brand me-2" href="https://mdbgo.com/">
+         <img
+           src="img/logo_jadi.png"
+           height="40"
+           alt="MDB Logo"
+           loading="lazy"
+           style="margin-top: -1px;margin-right: -10px;"
+         />
+       </a>
+   
+       <!-- Toggle button -->
+       <button
+         class="navbar-toggler"
+         type="button"
+         data-mdb-toggle="collapse"
+         data-mdb-target="#navbarButtonsExample"
+         aria-controls="navbarButtonsExample"
+         aria-expanded="false"
+         aria-label="Toggle navigation"
+       >
+         <i class="fas fa-bars"></i>
+       </button>
+   
+       <!-- Collapsible wrapper -->
+       <div class="collapse navbar-collapse" id="navbarButtonsExample">
+         <!-- Left links -->
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+               <a class="nav-link" href="index.html" style="text-decoration:none;">Dashboard</a>
+           </li>
+         </ul>
+         <!-- Left links -->
+   
+         <div class="d-flex align-items-center">
+          <button type="button" class="btn btn-link px-2 me-2" style="text-decoration:none;">
+               <a href="daftar_harga.html" style="text-decoration:none;">Daftar Harga</a> 
+              </button>
+         </div>
+       </div>
+       <!-- Collapsible wrapper -->
+     </div>
+     <!-- Container wrapper -->
+   </nav>
+   <header>
+     <div class="container">
+          <div class="col">
+               <div class="text-center" style="width: 700px;display: block;margin-right: auto;margin-left: auto;">
+                    <img src="img/ikon-logo.png" class="img-fluid" alt="Ikon Logo Bogor">
+                  </div>
+          </div>
+     </div>   
+   </header>
+   <div class="secform">
+        <div class="container">
+          <form action="checkout.php" class="p-120 shadow p-3 mb-5 bg-body rounded border border-5 border-secondary position-absolute top-50 start-50 translate-middle" method="post">
+               <h3 class="pb-3">Form Pemesanan</h3>
+               <div class="mb-3 row">
+                   <label for="nama" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                   <div class="col-sm-6">
+                       <input type="text" class="form-control border border-dark border-1" id="nama" required name="nama">
+                   </div>
+               </div>
+               <div class="mb-3 row">
+                   <label for="nik" class="col-sm-3 col-form-label">Nomor Identitas</label>
+                   <div class="col-sm-6">
+                       <input type="text" class="form-control border border-dark border-1" id="nik" minlength="16" required name="nik">
+                   </div>
+               </div>
+               <div class="mb-3 row">
+                   <label for="hp" class="col-sm-3 col-form-label">No. Hp</label>
+                   <div class="col-sm-6">
+                       <input type="text" class="form-control border border-dark border-1" id="hp" name="hp" required>
+                   </div>
+               </div>
+               <div class="mb-3 row">
+                   <label for="lokasiWisata" class="col-sm-3 col-form-label">Tempat Wisata</label>
+                   <div class="col-sm-6">
+                       <select name="lokasiWisata" id="lokasiWisata" class="form-select border border-dark border-1" aria-label="Default select example" required>
+                           <option selected>Pilih tempat wisata</option>
+                           <option value="Pulau Pahawang">Pulau Pahawang</option>
+                           <option value="Pulau Sari Ringgung">Pulau Sari Ringgung</option>
+                           <option value="Pulau Wartawan">Pulau Wartawan</option>
+                           <option value="Puncak Mas">Puncak Mas</option>
+                           <option value="Pantai Pasir Putih">Pantai Pasir Putih</option>
+                           <option value="Pantai Batu Lapis">Pantai Batu Lapis</option>
+                           <option value="Bukit Batu Tumpang">Bukit Batu Tumpang</option>
+                           <option value="Danau Biru Tambang">Danau Biru Tambang</option>
+                           <option value="Danau Bekri">Danau Bekri</option>
+                           <option value= "Taman Safari Bogor">Taman Safari Bogor</option>
+                           <option value="Puncak Bogor">Puncak Bogor</option>
+                       </select>
+                   </div>
+               </div>
+               <div class="mb-3 row">
+                   <label for="tanggal" class="col-sm-3 col-form-label">Tanggal Kunjungan</label>
+                   <div class="col-sm-6">
+                       <input type="date" class="form-control border border-dark border-1" name="tanggal" id="tanggal" required>
+                   </div>
+               </div>
+               <div class="mb-3 row">
+                   <label for="jumlahPengunjung" class="col-sm-3 col-form-label">Jumlah Pengunjung</label>
+                   <div class="col-sm-6">
+                       <select name="jumlahPengunjung" id="jumlahPengunjung" class="form-select border border-dark border-1" aria-label="Default select example" required>
+                           <option value="" selected>Berapa orang</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
+                       </select>
+                   </div>
+               </div>
+       
+               <div class="mb-3 row">
+                   <label for="jumlahAnak" class="col-sm-3 col-form-label">Pengunjung Anak-Anak <br> <sub class="">Usia di bawah 12 tahun</sub> </label>
+                   <div class="col-sm-6">
+                       <select name="jumlahAnak" id="jumlahAnak" class="form-select border border-dark border-1" aria-label="Default select example" required>
+                           <option value="" selected>Berapa orang</option>
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                           <option value="6">6</option>
+                           <option value="7">7</option>
+                           <option value="8">8</option>
+                           <option value="9">9</option>
+                           <option value="10">10</option>
+                       </select>
+                   </div>
+               </div>
+               <div class="mb-3 row">
+                   <label for="totalHarga" class="col-sm-3 col-form-label">Total Bayar</label>
+                   <div class="col-sm-6">
+                       <input type="text" readonly class="form-control-plaintext" id="totalHarga" value="">
+                   </div>
+               </div>
+               </div>
+       
+               <div class="form-check">
+                   <input class="form-check-input" type="checkbox" value="" id="persetujuan" required="">
+                   <label class="form-check-label col-sm-9" for="persetujuan">
+                       Saya dan/atau rombongan telah membaca, memahami, dan setuju berdasarkan syarat dan ketentuan yang telah ditetapkan
+                   </label>
+               </div>
+       
+               <div class="text-center mt-3">
+                   <!-- <button id="hitung" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Hitung total bayar</button> -->
+                   <button id="hitung" type="submit" class="btn btn-dark">Hitung total bayar</button>
+                   <button class="btn btn-dark col-sm-2">Pesan Tiket</button>
+                   <a href="index.php" class="btn btn-dark col-sm-2">Cancel</a>
+               </div>
+           </form>
+           <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+       
+       
+       
+           <script>
+              document.getElementById("hitung").onclick = function() {hitungTotalHarga()};
+         
+         // document.getElementById("bayar").onclick = function() {bayarPesanan()};
+       
+         function formatHarga(harga){
+           return new Intl.NumberFormat('id-ID', {
+             style: 'currency',
+             currency: 'IDR',
+             minimumFractionDigits: 0,
+           }).format(harga);
+         }
+         function hitungTotalHarga() {
+           
+           // AMBIL DATA DARI INPUT
+           nama             = document.getElementById("nama").value;
+           nik              = document.getElementById("nik").value;
+           hp               = document.getElementById("hp").value;
+           lokasiWisata     = document.getElementById("lokasiWisata").value;
+           tanggal          = document.getElementById("tanggal").value;
+           jumlahPengunjung = document.getElementById("jumlahPengunjung").value;
+           jumlahAnak       = document.getElementById("jumlahAnak").value;
+       
+           // HARGA TIKET
+           hargaTiket = 0;
+           if(lokasiWisata == "Pulau Pahawang")
+             hargaTiket = 40000;
+           else if (lokasiWisata == "Pulau Sari Ringgung")
+             hargaTiket = 20000;
+           else if (lokasiWisata == "Pulau Wartawan")
+             hargaTiket = 10000;
+           else if (lokasiWisata == "Puncak Mas")
+             hargaTiket = 10000;
+           else if (lokasiWisata == "Pantai Pasir Putih")
+             hargaTiket = 25000;
+           else if (lokasiWisata == "Pantai Batu Lapis")      
+             hargaTiket = 30000;
+           else if (lokasiWisata == "Bukit Batu Tumpang")
+             hargaTiket = 40000;
+           else if (lokasiWisata == "Danau Biru Tambang")
+             hargaTiket = 25000;
+           else if (lokasiWisata == "Danau Bekri")
+             hargaTiket = 20000;
+             else if (lokasiWisata == "Taman Safari")
+             hargaTiket = 25000;
+       
+           // HITUNG TOTAL HARGA
+           hargaTiket = hargaTiket;
+           total      = hargaTiket * (parseInt(jumlahAnak) + parseInt(jumlahPengunjung));
+           totalHarga = hargaTiket * jumlahPengunjung;
+           diskon     = hargaTiket * jumlahAnak;
+           
+           document.getElementById("totalHarga").value = formatHarga(totalHarga);
+         }
+           </script>
+        </div>
+
+   </div>
+   <footer>
+     <div class="container">
+               <p class="h1" style="font-size: 13px;padding-top: 150px;">Pariwisata <br> Kota Bogor 2022</p>
+     </div>
+   </footer>
+   <script>
+     document.getElementById("hitung").onclick = function() {hitungTotalHarga()};
+
+// document.getElementById("bayar").onclick = function() {bayarPesanan()};
+
+function formatHarga(harga){
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+  }).format(harga);
+}
+function hitungTotalHarga() {
+  
+  // AMBIL DATA DARI INPUT
+  nama             = document.getElementById("nama").value;
+  nik              = document.getElementById("nik").value;
+  hp               = document.getElementById("hp").value;
+  lokasiWisata     = document.getElementById("lokasiWisata").value;
+  tanggal          = document.getElementById("tanggal").value;
+  jumlahPengunjung = document.getElementById("jumlahPengunjung").value;
+  jumlahAnak       = document.getElementById("jumlahAnak").value;
+
+  <div class="col-sm-9">
+                      <select name="lokasiWisata" id="lokasiWisata" class="form-select form-select-sm" aria-label=".form-select-sm example" style="height: 41px;">
+                         <option selected>Pilih Tempat Wisata</option>
+                         <option value="Kebun Raya Bogor">Kebun Raya Bogor (15000)</option>
+                         <option value="Danau Quarry Jayamix">Danau Quarry Jayamix (2000)</option>
+                         <option value="De Ranch Megamedung">De Ranch Megamedung (20000)</option>
+                         <option value="Paralayang Bukit Gantole Puncak">Paralayang Bukit Gantole Puncak (13000)</option>
+                         <option value="Taman bunga Nusantara">Taman bunga Nusantara (50000)</option>
+                         <option value="Bukit Alesano">Bukit Alesano (10000)</option>
+                       </select>
+                    </div>
+  // HARGA TIKET
+  hargaTiket = 0;
+  if(lokasiWisata == "Kebun Raya Bogor")
+    hargaTiket = 15000;
+  else if (lokasiWisata == "Danau Quarry Jayamix")
+    hargaTiket = 2000;
+  else if (lokasiWisata == "De Ranch Megamedung")
+    hargaTiket = 20000;
+  else if (lokasiWisata == "Paralayang Bukit Gantole Puncak")
+    hargaTiket = 13000;
+  else if (lokasiWisata == "Taman bunga Nusantara")
+    hargaTiket = 50000;
+  else if (lokasiWisata == "Bukit Alesano")      
+    hargaTiket = 10000;
+
+  // HITUNG TOTAL HARGA
+  hargaTiket = hargaTiket;
+  total      = hargaTiket * (parseInt(jumlahAnak) + parseInt(jumlahPengunjung));
+  totalHarga = hargaTiket * jumlahPengunjung;
+  diskon     = hargaTiket * jumlahAnak;
+  
+  document.getElementById("totalHarga").value = formatHarga(totalHarga);
+}
+  </script>
+
+   
+</body>
+</html>

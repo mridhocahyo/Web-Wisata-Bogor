@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <title>Wisata Bogor</title>
+
+     <style>
+          body{
+               background-color: #D9DBF1;
+          }
+          
+          .col {
+               height: 400px;
+               display: block;
+          }
+
+          .h1 {
+               font-size: 30px ;
+               font-weight: 600;
+               color: white;
+               text-shadow: 2px 2.5px #80475E;
+          }
+          .col img{
+               position: relative;
+               cursor: pointer;
+               display: block;
+               height: 100%;
+               width: 100%;
+               -webkit-filter: grayscale(60%);
+               filter: grayscale(60%);
+               z-index: 0;
+          }
+          
+          figure{
+               position: absolute;
+               margin-left: 25px;
+               margin-top: -100px;
+               z-index: 1;
+          }
+          header {
+               position:relative;
+               width: 100%;
+               display: block;
+               height: 224px;
+               background-color: #D9DBF1;
+          }
+          section {
+               position:relative;
+               width: 100%;
+               display: block;
+               height: 400px;
+               background-color: #D9DBF1;
+          }
+          .nav-link {
+               margin-left: 8px;
+          }
+
+          footer {
+               position:relative;
+               width: 100%;
+               display: block;
+               height: 200px;
+               background-color: #2D728F;
+          }
+     </style>
+</head>
+<body>
+     <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #4ABDAC;">
+     <!-- Container wrapper -->
+     <div class="container">
+       <!-- Navbar brand -->
+       <a class="navbar-brand me-2" href="https://mdbgo.com/">
+         <img
+           src="img/logo_jadi.png"
+           height="40"
+           alt="MDB Logo"
+           loading="lazy"
+           style="margin-top: -1px;margin-right: -10px;"
+         />
+       </a>
+   
+       <!-- Toggle button -->
+       <button
+         class="navbar-toggler"
+         type="button"
+         data-mdb-toggle="collapse"
+         data-mdb-target="#navbarButtonsExample"
+         aria-controls="navbarButtonsExample"
+         aria-expanded="false"
+         aria-label="Toggle navigation"
+       >
+         <i class="fas fa-bars"></i>
+       </button>
+   
+       <!-- Collapsible wrapper -->
+       <div class="collapse navbar-collapse" id="navbarButtonsExample">
+         <!-- Left links -->
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           <li class="nav-item">
+             <a class="nav-link" href="index.html" style="text-decoration:none;">Dashboard</a>
+           </li>
+         </ul>
+         <!-- Left links -->
+   
+         <div class="d-flex align-items-center">
+           <button type="button" class="btn btn-link px-2 me-2" style="text-decoration:none;">
+            <a href="daftar_harga.html" style="text-decoration:none;">Daftar Harga</a> 
+           </button>
+           <a href="form_pemesanan.php" style="text-decoration:none;">
+           <button type="button" class="btn btn-primary me-3" >
+               Pesan Tiket
+           </button>
+          </a>
+         </div>
+       </div>
+       <!-- Collapsible wrapper -->
+     </div>
+     <!-- Container wrapper -->
+   </nav>
+   <header>
+     <div class="container">
+          <div class="col">
+               <div class="text-center" style="width: 700px;display: block;margin-right: auto;margin-left: auto;">
+                    <img src="img/ikon-logo.png" class="img-fluid" alt="Ikon Logo Bogor">
+                  </div>
+          </div>
+     </div>   
+   </header>
+   <section>
+     <div class="container">
+          <div class="row">
+               <div class="col" style="margin-right: -26px;">
+                         <img src="img/1.jpg" class="img-fluid" alt="Kebun Raya Bogor" >
+                         <figure>
+                              <blockquote class="blockquote">
+                                   <p class="h1">Kebun <br> Raya Bogor</p>
+                              </blockquote>
+                         </figure>
+               </div>
+               <div class="col" style="margin-right: -26px;">
+                         <img src="img/2.jpg" class="img-fluid" alt="Danau Quarry Jayamix">
+                         <figure>
+                              <blockquote class="blockquote">
+                                   <p class="h1">Danau <br> Quarry Jayamix</p>
+                              </blockquote>
+                         </figure>
+               </div>
+               <div class="col">
+                         <img src="img/3.jpg" class="img-fluid" alt="De Ranch Megamedung">
+                         <figure>
+                              <blockquote class="blockquote">
+                                   <p class="h1">De Ranch <br> Megamedung</p>
+                              </blockquote>
+                         </figure>
+               </div>
+          </div>
+        </div>
+   </section>
+   <section>
+     <div class="container">
+          <div class="row">
+               <div class="col" style="margin-right: -26px;">
+                         <img src="img/4.jpg" class="img-fluid" alt="Paralayang Bukit Gantole Puncak" >
+                         <figure>
+                              <blockquote class="blockquote">
+                                   <p class="h1">Paralayang Bukit <br> Gantole Puncak</p>
+                              </blockquote>
+                         </figure>
+               </div>
+               <div class="col" style="margin-right: -26px;">
+                         <img src="img/5.png" class="img-fluid" alt="Taman bunga Nusantara">
+                         <figure>
+                              <blockquote class="blockquote">
+                                   <p class="h1">Taman bunga <br> Nusantara</p>
+                              </blockquote>
+                         </figure>
+               </div>
+               <div class="col">
+                         <img src="img/6.jpg" class="img-fluid" alt="Bukit Alesano">
+                         <figure>
+                              <blockquote class="blockquote">
+                                   <p class="h1">Bukit <br> Alesano</p>
+                              </blockquote>
+                         </figure>
+               </div>
+          </div>
+        </div>
+   </section>
+   <div class="text-center">
+     <a href="daftar_harga.html" style="text-decoration:none;">
+     <button type="button" class="btn btn-info" style="margin:50px;margin-bottom:80px;width: auto;">Daftar Harga</button>
+     </a>
+   </div>
+   <footer>
+     <div class="container">
+               <p class="h1" style="font-size: 13px;padding-top: 150px;">Pariwisata <br> Kota Bogor 2022</p>
+     </div>
+   </footer>
+</body>
+</html>
